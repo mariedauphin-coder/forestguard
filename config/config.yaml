@@ -1,0 +1,85 @@
+project:
+  name: ForestGuard
+  version: "1.0.0"
+  seed: 42
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  patches_dir: data/patches
+  patch_size: 256
+  stride: 128
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+sentinel1:
+  polarizations: [VV, VH]
+  resolution: 10        # metres
+  speckle_filter: lee
+  filter_size: 5
+  db_scale: true
+  clip_min: -25.0
+  clip_max: 0.0
+
+sentinel2:
+  bands: [B2, B3, B4, B8, B11, B12]   # Blue, Green, Red, NIR, SWIR1, SWIR2
+  resolution: 10
+  cloud_prob_threshold: 20             # % cloud probability for masking
+  nodata_value: 0
+  scale_factor: 10000.0               # BOA reflectance divisor
+
+fusion:
+  sar_channels: 2      # VV + VH
+  optical_channels: 6  # 6 Sentinel-2 bands
+  total_channels: 8    # fused input depth
+
+model:
+  encoder: mobilenet_v2
+  encoder_pretrained: true
+  encoder_weights: imagenet
+  decoder_channels: [256, 128, 64, 32, 16]
+  num_classes: 1       # binary deforestation mask
+  dropout: 0.2
+  checkpoint_dir: checkpoints/
+
+training:
+  epochs: 100
+  batch_size: 16
+  learning_rate: 1.0e-4
+  weight_decay: 1.0e-5
+  scheduler: cosine
+  warmup_epochs: 5
+  mixed_precision: true
+  gradient_clip: 1.0
+  pos_weight: 3.0      # class imbalance: deforested area << intact forest
+  dice_weight: 0.5     # combined BCE + Dice loss weighting
+
+augmentation:
+  horizontal_flip: 0.5
+  vertical_flip: 0.5
+  rotate_90: 0.5
+  random_brightness: 0.2
+  random_contrast: 0.2
+  elastic_transform: 0.3
+
+postprocessing:
+  min_area_ha: 1.0           # minimum alert polygon area in hectares
+  min_area_pixels: 100       # minimum contiguous pixels before vectorization
+  morphology_kernel: 5       # closing/opening kernel size
+  confidence_threshold: 0.5  # sigmoid threshold
+  simplify_tolerance: 10.0   # polygon simplification in metres
+
+alerts:
+  severity_thresholds:        # area in hectares
+    low: 1.0
+    medium: 10.0
+    high: 100.0
+  output_crs: EPSG:4326
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  workers: 2
+  max_upload_mb: 512
+  result_ttl_seconds: 3600
