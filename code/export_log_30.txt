@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "/home/marie-dauphin-dushime/forestguard/fg/tools/gee_export.py", line 8, in <module>
+    import ee, io, os, json, math, time, argparse, requests, numpy as np, zipfile
+ModuleNotFoundError: No module named 'ee'
+ok IvoryCoast_13_9 loss px 45
+ok IvoryCoast_9_0 loss px 221
+ok IvoryCoast_9_20 loss px 133
+ok IvoryCoast_18_10 loss px 184
+ok IvoryCoast_17_18 loss px 285
+ok IvoryCoast_21_7 loss px 202
+ok IvoryCoast_18_3 loss px 229
+ok IvoryCoast_20_6 loss px 408
+ok IvoryCoast_22_4 loss px 330
+ok IvoryCoast_12_13 loss px 28
+ok IvoryCoast_13_7 loss px 30
+ok IvoryCoast_0_7 loss px 498
+ok IvoryCoast_2_5 loss px 317
+ok IvoryCoast_19_15 loss px 217
+ok IvoryCoast_21_17 loss px 139
+ok IvoryCoast_7_18 loss px 69
+ok IvoryCoast_19_12 loss px 31
+ok IvoryCoast_23_11 loss px 257
+ok IvoryCoast_13_19 loss px 15
+ok IvoryCoast_6_0 loss px 772
+ok IvoryCoast_11_19 loss px 36
+ok IvoryCoast_12_20 loss px 115
+ok IvoryCoast_6_11 loss px 352
+ok IvoryCoast_16_2 loss px 62
+ok IvoryCoast_7_17 loss px 369
+ok IvoryCoast_16_17 loss px 143
+ok IvoryCoast_6_8 loss px 295
+ok IvoryCoast_11_0 loss px 69
+ok IvoryCoast_0_1 loss px 195
+ok IvoryCoast_10_19 loss px 241
+120 tiles

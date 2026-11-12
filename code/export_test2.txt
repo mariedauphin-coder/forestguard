@@ -1,0 +1,13 @@
+ok Amazon_15_3 loss px 0
+ok Amazon_4_10 loss px 15
+ok Amazon_8_11 loss px 54
+ok Congo_4_16 loss px 738
+ok Congo_18_1 loss px 2884
+ok Congo_5_1 loss px 0
+ok IvoryCoast_16_17 loss px 765
+ok IvoryCoast_19_19 loss px 131
+ok IvoryCoast_22_3 loss px 169
+ok Carpathians_11_14 loss px 280
+ok Carpathians_6_0 loss px 136
+ok Carpathians_13_12 loss px 1087
+12 tiles

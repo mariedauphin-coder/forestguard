@@ -1,0 +1,5 @@
+# Training environment (Colab T4): torch 2.14.1+cu130
+numpy
+pandas
+scikit-learn
+tqdm

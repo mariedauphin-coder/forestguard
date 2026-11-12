@@ -1,0 +1,13 @@
+too small Amazon_8_8 (22, 255, 257)
+too small Amazon_15_0 (22, 255, 257)
+too small Amazon_4_9 (22, 255, 257)
+ok Congo_2_16 loss px 1915
+ok Congo_20_7 loss px 21
+too small Congo_6_5 (22, 255, 257)
+ok IvoryCoast_13_9 loss px 39
+ok IvoryCoast_9_0 loss px 217
+ok IvoryCoast_9_20 loss px 146
+ok Carpathians_2_5 loss px 1581
+ok Carpathians_11_1 loss px 463
+ok Carpathians_1_8 loss px 316
+8 tiles

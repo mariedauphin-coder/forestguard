@@ -1,0 +1,51 @@
+{
+ "variant": "late_only",
+ "seed": 0,
+ "split": "split_seed0.csv",
+ "params": 15015,
+ "best_epoch": 0,
+ "val_F1": 0.0,
+ "test_pooled": {
+  "P": 0.0,
+  "R": 0.0,
+  "F1": 0.0,
+  "IoU": 0.0
+ },
+ "test_macro": {
+  "empty_correct": {
+   "P": 0.32142857142857145,
+   "R": 0.32142857142857145,
+   "F1": 0.32142857142857145,
+   "IoU": 0.32142857142857145
+  },
+  "nonempty": {
+   "P": 0.0,
+   "R": 0.0,
+   "F1": 0.0,
+   "IoU": 0.0
+  },
+  "n_patches": 28,
+  "n_empty": 9
+ },
+ "epochs": 2,
+ "lr": 0.0003,
+ "bs": 8,
+ "n_train": 9,
+ "n_val": 40,
+ "n_test": 28,
+ "train_seconds": 0.8294022083282471,
+ "device": "cpu",
+ "torch": "2.15.0+cpu",
+ "history": [
+  {
+   "epoch": 0,
+   "loss": 0.8305354118347168,
+   "val_F1": 0.0
+  },
+  {
+   "epoch": 1,
+   "loss": 0.8353064358234406,
+   "val_F1": 0.0
+  }
+ ]
+}

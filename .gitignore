@@ -1,0 +1,12 @@
+fgenv/
+__pycache__/
+*.pyc
+raw_tiles/
+raw_tiles_pilot/
+*.npz
+*.pt
+*.tar
+*.tar.gz
+.ipynb_checkpoints/
+.env
+*credentials*
