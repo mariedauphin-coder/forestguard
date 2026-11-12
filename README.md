@@ -34,7 +34,7 @@ Nothing was rounded up, no seed was dropped, no run was repeated to look better.
 
 Inputs: Sentinel-1 GRD (VV, VH, dB) and Sentinel-2 SR Harmonized (B2, B3, B4, B5, B8, B11, NDVI, NDMI; SCL cloud mask, <40 % cloudy scenes), median composites of the same calendar window in 2021 (pre) and 2022 (post).
 Labels: Hansen Global Forest Change v1.13, `lossyear == 22` and `treecover2000 > 30`.
-The tiles (`.npz` + `manifest.csv`) and the trained weights (`model.pt`, 39 runs) are archived on Zenodo: **DOI to be added**.
+The tiles (`.npz` + `manifest.csv`) and the trained weights (`model.pt`, 39 runs) are available from the corresponding author on request.
 `code/tools/gee_export.py` regenerates the tiles from Earth Engine (set `EE_PROJECT` to your own cloud project).
 
 ## Protocol in one paragraph
